@@ -27,6 +27,7 @@ public class CustomerContoller {
     public List<Customer>findAllCustomers(){
        return customerService.getCustomers();
     }
+
     @GetMapping("/customer/{id}")
     public Customer findCustomerById( @PathVariable int id){
        return customerService.getCustomerById(id);
@@ -36,13 +37,13 @@ public class CustomerContoller {
 //       return customerService.getCustomerByName(name);
 //    }
 
-    @PutMapping("update")
+    @PutMapping("/update")
     public Customer updateCustomer(@RequestBody Customer customer){
         return customerService.updateCustomer(customer);
     }
-    @DeleteMapping("/delete{id}")
-    public String deleteCustomer ( @PathVariable int id){
-       return  customerService.deleteCustomer(id);
+    @DeleteMapping("/delete/{id}")
+    public void deleteCustomer ( @PathVariable int id){
+       customerService.deleteCustomer(id);
     }
 
 }
