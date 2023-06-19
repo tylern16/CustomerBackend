@@ -24,7 +24,8 @@ public class DependentContoller {
     public List<Dependent> addDependents(@RequestBody List<Dependent> dependents){
         return dependentService.saveDependends(dependents);
     }
-   @GetMapping("/dependents")
+
+    @GetMapping("/dependents")
     public List<Dependent> findAllDependents(){return dependentService.getDependents();}
 
     @GetMapping("/dependent/{Id}")
