@@ -16,5 +16,4 @@ public class Dependent {
     private String name;
     private String  email;
     private String gender;
-
 }

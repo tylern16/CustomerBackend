@@ -38,7 +38,6 @@ public class CustomerService {
     }
 
     public Customer updateCustomer(Customer customer){
-
         Customer existingCustomer = customerRepository.findById(customer.getId()).orElse(null);
         existingCustomer.setName(customer.getName());
         existingCustomer.setEmail(customer.getEmail());
