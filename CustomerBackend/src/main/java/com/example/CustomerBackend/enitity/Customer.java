@@ -24,4 +24,10 @@ public class Customer {
     @OneToMany(targetEntity = Dependent.class,cascade = CascadeType.ALL)
     @JoinColumn(name="cp_fk",referencedColumnName = "id")
     private List<Dependent> dependentList;
+
+    public Customer() {
+    }
+
+
+
 }

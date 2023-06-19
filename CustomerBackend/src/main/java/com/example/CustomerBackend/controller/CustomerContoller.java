@@ -15,11 +15,11 @@ public class CustomerContoller {
 
     @Autowired
     private CustomerRepository customerRepository;
-   @PostMapping("/addCustomer")
+   @PostMapping("/addcustomer")
     public Customer addCustomer(@RequestBody Customer customer){
         return customerService.saveCustomer(customer);
     }
-   @PostMapping("/addCustomers")
+   @PostMapping("/addcustomers")
     public List<Customer> addCustomers(@RequestBody List<Customer> customers){
         return customerService.saveCustomers(customers);
     }
@@ -40,7 +40,7 @@ public class CustomerContoller {
     public Customer updateCustomer(@RequestBody Customer customer){
         return customerService.updateCustomer(customer);
     }
-    @DeleteMapping("/delete{id}")
+    @DeleteMapping("/delete/{id}")
     public String deleteCustomer ( @PathVariable int id){
        return  customerService.deleteCustomer(id);
     }
